@@ -1,35 +1,35 @@
-package com.jarellano.persistence.impl;
+package com.jarellano.service.impl;
 
 import com.jarellano.entity.DetallePedido;
 import com.jarellano.persistence.IDetallePedidoDAO;
-import com.jarellano.repository.DetallePedidoRepository;
+import com.jarellano.service.IDetallePedidoService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import java.util.*;
 
-@Component
-public class IDetallePedidoDAOImpl implements IDetallePedidoDAO {
+@Service
+public class DetallePedidoServiceImpl implements IDetallePedidoService {
 
     @Autowired
-    private DetallePedidoRepository detallePedidoRepository;
+    private IDetallePedidoDAO detallePedidoDAO;
 
     @Override
     public List<DetallePedido> findAllDetallePedidos() {
-        return (List<DetallePedido>) detallePedidoRepository.findAll();
+        return detallePedidoDAO.findAllDetallePedidos();
     }
 
     @Override
     public Optional<DetallePedido> findDetallePedidoById(Long idDetallePedido) {
-        return detallePedidoRepository.findById(idDetallePedido);
+        return detallePedidoDAO.findDetallePedidoById(idDetallePedido);
     }
 
     @Override
     public void saveDetallePedido(DetallePedido detallePedido) {
-        detallePedidoRepository.save(detallePedido);
+        detallePedidoDAO.saveDetallePedido(detallePedido);
     }
 
     @Override
     public void deteleDetallePedidoById(Long idDetallePedido) {
-        detallePedidoRepository.deleteById(idDetallePedido);
+        detallePedidoDAO.deteleDetallePedidoById(idDetallePedido);
     }
 }
