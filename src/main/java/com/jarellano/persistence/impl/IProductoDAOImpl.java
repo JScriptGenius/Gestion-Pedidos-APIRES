@@ -14,7 +14,7 @@ public class IProductoDAOImpl implements IProductoDAO {
     private ProductoRepository productoRepository;
 
     @Override
-    public List<Producto> findAlProductos() {
+    public List<Producto> findAllProductos() {
         return (List<Producto>) productoRepository.findAll();
     }
 

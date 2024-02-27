@@ -22,7 +22,7 @@ public class Pedido {
             strategy = GenerationType.IDENTITY
     )
     @Column(name = "id_pedido")
-    private Long idpedido;
+    private Long idPedido;
     private String numeroPedido;
 
     @ManyToOne
@@ -30,6 +30,7 @@ public class Pedido {
             name = "id_cliente",
             nullable = false
     )
+    @JsonIgnore
     private Cliente cliente;
 
     @OneToMany(

@@ -22,14 +22,4 @@ public class IDetallePedidoDAOImpl implements IDetallePedidoDAO {
     public Optional<DetallePedido> findDetallePedidoById(Long idDetallePedido) {
         return detallePedidoRepository.findById(idDetallePedido);
     }
-
-    @Override
-    public void saveDetallePedido(DetallePedido detallePedido) {
-        detallePedidoRepository.save(detallePedido);
-    }
-
-    @Override
-    public void deteleDetallePedidoById(Long idDetallePedido) {
-        detallePedidoRepository.deleteById(idDetallePedido);
-    }
 }

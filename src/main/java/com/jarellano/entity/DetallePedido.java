@@ -19,18 +19,18 @@ public class DetallePedido {
             strategy = GenerationType.IDENTITY
     )
     @Column(name = "id_detalle_pedido")
-    private Long iddetallepedido;
+    private Long idDetallePedido;
 
     @ManyToOne
     @JoinColumn(
-            name = "pedido_id",
+            name = "id_pedido",
             nullable = false
     )
     private Pedido pedido;
 
     @ManyToOne
     @JoinColumn(
-            name = "producto_id",
+            name = "id_producto",
             nullable = false
     )
     private Producto producto;

@@ -8,4 +8,5 @@ public interface IPedidoService {
     Optional<Pedido> findPedidoById(Long idPedido);
     void savePedido(Pedido pedido);
     void deletePedidoById(Long idPedido);
+    Optional<Pedido> findPedidoByNumeroPedido(String numPedido);
 }

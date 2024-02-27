@@ -14,8 +14,8 @@ public class ProductoServiceImpl implements IProductoService {
     private IProductoDAO productoDAO;
 
     @Override
-    public List<Producto> findAlProductos() {
-        return productoDAO.findAlProductos();
+    public List<Producto> findAllProductos() {
+        return productoDAO.findAllProductos();
     }
 
     @Override

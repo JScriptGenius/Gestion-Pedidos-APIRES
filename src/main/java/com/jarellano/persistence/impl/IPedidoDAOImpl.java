@@ -32,4 +32,9 @@ public class IPedidoDAOImpl implements IPedidoDAO {
     public void deletePedidoById(Long idPedido) {
         pedidoRepository.deleteById(idPedido);
     }
+
+    @Override
+    public Optional<Pedido> findPedidoByNumeroPedido(String numPedido) {
+        return pedidoRepository.findPedidoByNumeroPedido(numPedido);
+    }
 }

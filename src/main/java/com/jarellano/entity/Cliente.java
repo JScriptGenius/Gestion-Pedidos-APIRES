@@ -20,13 +20,14 @@ public class Cliente {
             strategy = GenerationType.IDENTITY
     )
     @Column(name = "id_cliente")
-    private Long idcliente;
+    private Long idCliente;
     private String nombre;
     private String email;
 
     @OneToMany(
             mappedBy = "cliente",
             cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY,
             orphanRemoval = true
     )
     @JsonIgnore

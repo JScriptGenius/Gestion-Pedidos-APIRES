@@ -19,7 +19,7 @@ public class Producto {
             strategy = GenerationType.IDENTITY
     )
     @Column(name = "id_producto")
-    private Long idproducto;
+    private Long idProducto;
     private String nombre;
     private BigDecimal precio;
 }

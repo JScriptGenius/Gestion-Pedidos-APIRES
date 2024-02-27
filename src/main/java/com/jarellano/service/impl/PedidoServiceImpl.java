@@ -32,4 +32,9 @@ public class PedidoServiceImpl implements IPedidoService {
     public void deletePedidoById(Long idPedido) {
         pedidoDAO.deletePedidoById(idPedido);
     }
+
+    @Override
+    public Optional<Pedido> findPedidoByNumeroPedido(String numPedido) {
+        return pedidoDAO.findPedidoByNumeroPedido(numPedido);
+    }
 }

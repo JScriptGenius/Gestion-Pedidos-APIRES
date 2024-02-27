@@ -22,14 +22,4 @@ public class DetallePedidoServiceImpl implements IDetallePedidoService {
     public Optional<DetallePedido> findDetallePedidoById(Long idDetallePedido) {
         return detallePedidoDAO.findDetallePedidoById(idDetallePedido);
     }
-
-    @Override
-    public void saveDetallePedido(DetallePedido detallePedido) {
-        detallePedidoDAO.saveDetallePedido(detallePedido);
-    }
-
-    @Override
-    public void deteleDetallePedidoById(Long idDetallePedido) {
-        detallePedidoDAO.deteleDetallePedidoById(idDetallePedido);
-    }
 }
